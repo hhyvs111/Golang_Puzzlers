@@ -3,6 +3,16 @@ package main
 import "fmt"
 
 func main() {
+
+ch2 := make(chan int); // zero channel
+ch3 := make(chan int, 10); // buffered channel
+
+fmt.Printf("ch2,len: %v, cap:%v \n",len(ch2),cap(ch2)) 
+fmt.Printf("ch2,len: %v, cap:%v \n",len(ch2),cap(ch2)) 
+fmt.Printf("ch3,len: %v, cap:%v \n",len(ch3),cap(ch3)) 
+
+
+
 	ch1 := make(chan int, 2)
 	// 发送方。
 	go func() {
